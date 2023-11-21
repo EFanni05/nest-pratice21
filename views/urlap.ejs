@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Megadott adatok:<br>
+        Email: <%= email %><br>
+    </p>
+    <!--form-->
+    <form method="get">
+        <p>
+            <label>
+                Email:<br>
+                <input type="email" name="email" required>
+                <div style="color: red"><%= errors.email %></div>
+            </label>
+        </p>
+        <p>
+            <label>
+                Jelszó:<br>
+                <input type="password" name="password" required>
+                <div style="color: red"><%= errors.password%></div>
+            </label>
+        </p>
+        <p>
+            <label>
+                Jelszó újra:<br>
+                <input type="password" name="password1" required>
+                <div style="color: red"><%= errors.password %></div>
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Elküld">
+        </p>
+    </form>
+</body>
+</html>
