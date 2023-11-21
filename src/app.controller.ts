@@ -26,8 +26,11 @@ export class AppController {
      if (!(password == password1)) {
        errors.password = 'A jelszók nem egyeznek';
      }
-    if(!regex.test(password) || !regex.test(password1)){
+    if(!regex.test(password)){
       errors.password = "A jelszó nem fele meg"
+    }
+    if(!regex.test(password1)){
+      errors.password1 = "A jelszó nem fele meg"
     }
     return { email, errors, negyedik: 12 };
   }
